@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import "react-native-gesture-handler"; // This should be at the top
+import React, { useState } from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler"; // Import this
+import MessagesScreen from "./app/screens/MessagesScreen";
+import AccountScreen from "./app/screens/AccountScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import AppPicker, { Items } from "./app/components/AppPicker";
+import LoginScreen from "./app/screens/LoginScreen";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <LoginScreen />
+    </GestureHandlerRootView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
