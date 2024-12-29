@@ -18,7 +18,7 @@ const AppFormField = ({name, ...otherProps}: AppFormFieldProp) => {
       onChangeText={handleChange(name)}
       {...otherProps}
     />
-    <ErrorMessage error={errors[name]} visible={touched[name]} />
+   
     </>
   )
 }
